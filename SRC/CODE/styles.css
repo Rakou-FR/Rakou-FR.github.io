@@ -1,0 +1,306 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../images/oula.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: wait;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 80px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.pseudo {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+    margin-top: -5px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.infos {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+    margin-top: -5px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    max-width: 220px;
+    /* margin-top: 15%; */
+}
+
+.icons img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    vertical-align: middle;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+.icons img:hover {
+    box-shadow: 0 0 15px rgb(255, 255, 255), 0 0 25px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+.view-counter {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.view-counter img {
+    width: 24px;
+    height: 24px;
+}
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: particle-move linear infinite;
+}
+
+@keyframes particle-move {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--dx), var(--dy));
+        opacity: 0;
+    }
+}
+.description-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+    max-width: 200px;
+    text-align: center;
+    z-index: 7;
+}
+.volume-control {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.volume-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transform: scale(2);
+}
+
+#volumeSlider {
+    width: 100px;
+    cursor: pointer;
+}
+
+#equalizerCanvas {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: transparent; /* Fond transparent */
+    z-index: 1000;
+}
+
+
+.info-box {
+    position: absolute;
+    top: 29%;
+    right: 17%;
+    width: 15%; /* Taille normale */
+    background: rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 1280px) {
+    .info-box {
+        position: fixed;
+        /* bottom: 20px; Place la boîte en bas de l'écran */
+        width: 15%;
+        right: 19%;  /* Aligne à droite */
+        top: 18.5%; /* Désactive le top pour ne pas chevaucher la partie supérieure */
+    }
+
+    /* Ajuster la .container pour éviter tout chevauchement */
+    .container {
+        margin-bottom: 200px;  /* S'assurer qu'il y a un espace en bas */
+    }
+    
+}
+
+@media (max-width: 1280px) {
+    .info-box {
+        width: 90%; /* Plus large pour s'adapter */
+        left: 50%;
+        transform: translateX(-50%); /* Centrer */
+        top: auto;
+        bottom: 130px; /* Place en bas */
+        display: none;
+    }
+    .container {
+        padding: 40px;
+        width: 80%; /* Plus large pour s'adapter */
+        margin: 0 auto;
+        /* transform: translatey(-50%);  */
+        top: auto;
+        bottom: 15%; /* Place en bas */
+        display: flex;
+        flex-direction: column;  /* Colonne pour les petits écrans */
+        justify-content: center; /* Centre le contenu verticalement */
+        align-items: center;
+    }
+    .icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Affiche 4 icônes par ligne */
+        gap: 10px; /* Ajuste l'espacement entre les icônes */
+        max-width: 100%; /* S'adapte à la largeur disponible */
+    }
+    .icons img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        vertical-align: middle;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+        transition: all 0.3s ease-in-out;
+        object-fit: cover;
+    }
+}
+
+.info-box h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #000000;
+    font-family: 'Arial', sans-serif;
+    display: none; 
+}
+
+.info-box p {
+    margin: 5px 0;
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+.info-box span {
+    color: #000000;
+}
+
+#toggleInfo {
+    position: fixed;
+    top: 10px;  /* Place le bouton en haut */
+    right: 10px; /* Aligné à droite */
+    display: flex;
+    align-items: center; /* Aligne verticalement l'icône et le texte */
+    background: rgba(255, 255, 255, 0.4);
+    font-family: 'Arial', sans-serif;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+#toggleInfo img {
+    width: 30px;  /* Taille de l'icône */
+    height: 30px; /* Taille de l'icône */
+    border-radius: 50%;  /* Pour donner un effet rond */
+}
+
+/* 📱 Sur mobile, le bouton affichera/masquera la box info */
+@media (max-width: 768px) {
+    .info-box {
+        display: none; /* Cache la box info par défaut sur mobile */
+    }
+}
+
+
+#particlesCanvas {
+    position: fixed; /* Le canvas est fixe */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Occupe toute la largeur de la fenêtre */
+    height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+    z-index: -1; /* Placer derrière le contenu */
+    pointer-events: none; /* Les particules ne doivent pas interférer avec les clics */
+}
+
+/* Reste de ton CSS */

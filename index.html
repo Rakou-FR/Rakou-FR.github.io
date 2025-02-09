@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShotGun.Lol</title>
+    <link rel="icon" type="image/png" href="./SRC/images/logo-modified.png">
+    <link rel="stylesheet" href="./SRC/CODE/styles.css">
+</head>
+<body>
+    <!-- Canvas pour les particules -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <script src="./SRC/CODE/info.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let audio = document.querySelector("audio");
+            let volumeSlider = document.getElementById("volumeSlider");
+    
+            volumeSlider.addEventListener("input", function() {
+                audio.volume = this.value;
+            });
+        });
+    </script>
+    
+    <div class="volume-control">
+        <img src="./SRC/images/volume.png" alt="Volume" class="volume-icon">
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.02">
+    </div>
+    
+    <audio autoplay loop>
+        <source src="./SRC/Musique/musik.mp3" type="audio/mp3">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let audio = document.querySelector("audio");
+                audio.volume = 0.02;
+            });
+        </script>        
+    </audio>
+    
+    <div class="particles"></div>
+
+    <div class="container">
+        <div>
+            <img src="./SRC/images/logo.jpeg" alt="Logo" class="logo">
+            <div class="pseudo">Rakou</div>
+        </div>
+
+        <div class="icons">
+        </div>
+
+        <div class="view-counter">
+            <img src="./SRC/images/eye-icon.png" alt="Vues">
+            <span>0x1F4 +</span>
+        </div>
+    </div>
+
+    <div class="description-box" id="descriptionBox"></div>
+    
+    <button id="toggleInfo">
+        <img src="./SRC/images/info.png" alt="Info">
+    </button>
+    
+    <div class="info-box" id="infoBox">
+        <div class="infos">
+            <h2>Informations</h2>
+            <p><strong>Nom :</strong> <span id="infoName"></span></p>
+            <p><strong>Profession :</strong> <span id="infoProfession"></span></p>
+            <p><strong>Disponibilité :</strong> <span id="infoDisponibilite"></span></p>
+            <p><strong>Expérience :</strong> <span id="infoExperience"></span></p>
+            <p><strong>Contact :</strong> <span id="infoContact"></span></p>
+        </div>    
+    </div>
+    
+    <!-- Canvas pour l'égaliseur (si nécessaire) -->
+    <canvas id="equalizerCanvas" width="600" height="150"></canvas>
+    
+    <!-- Script pour gérer les particules -->
+    <script src="./SRC/CODE/particles.js"></script> 
+
+    <!-- Script pour gérer les bulles (si nécessaire) -->
+    <script src="./SRC/CODE/bulles.js"></script>
+
+    <!-- Script pour l'égaliseur (si nécessaire) -->
+    <script src="./SRC/CODE/eq.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+[
+    {
+        "alt": "GitHub",
+        "src": "./SRC/images/github.png",
+        "description": "Profil GitHub",
+        "link": "https://github.com/rakou-fr"
+    },
+    {
+        "alt": "Vintzen",
+        "src": "./SRC/images/Vintzen.png",
+        "description": "Vintzen Dev-second",
+        "link": "https://vintzen.fr/"
+    },
+    {
+        "alt": "WorldResell",
+        "src": "./SRC/images/worldresell.jpg",
+        "description": "WorldResell Dev-second",
+        "link": "https://www.worldresell.fr/"
+    },
+    {
+        "alt": "RootMe",
+        "src": "./SRC/images/rootme.svg",
+        "description": "Profil RootMe",
+        "link": "https://www.root-me.org/Rakou-460844?lang=fr"
+    },
+    {
+        "alt": "Rebet",
+        "src": "./SRC/images/Rebet.png",
+        "description": "ReBet AI service de vente",
+        "link": "#"
+    },
+    {
+        "alt": "Retools",
+        "src": "./SRC/images/retools.gif",
+        "description": "Solution logiciel Retools Resell Vinted",
+        "link": "#"
+    },
+    {
+        "alt": "bet-analytix Rebet AI",
+        "src": "./SRC/images/ia.gif",
+        "description": "Résultat Rebet AI",
+        "link": "https://app.bet-analytix.com/bankroll/1435399"
+    },
+    {
+        "alt": "Projet Musique",
+        "src": "./SRC/images/eq.gif",
+        "description": "Rick Rolled Warning !!",
+        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+]
